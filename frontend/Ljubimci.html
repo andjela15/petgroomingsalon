@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ljubimci - Pet Grooming</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">Pet Grooming</div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="vlasnik.html">Vlasnici</a></li>
+        <li><a href="ljubimci.html" class="active">Ljubimci</a></li>
+        <li><a href="termini.html">Termini</a></li>
+    </ul>
+</nav>
+
+<div class="page-header">
+    <h1>Ljubimci</h1>
+    <p>Evidencija ljubimaca i njihovih vlasnika</p>
+</div>
+
+<div class="form-container">
+    <h2>Dodaj ljubimca</h2>
+
+    <input type="hidden" id="ljubimacId">
+
+    <div class="form-grid">
+        <input type="text" id="ime" placeholder="Ime ljubimca" class="input-field">
+        <input type="text" id="vrsta" placeholder="Vrsta, npr. pas, mačka" class="input-field">
+        <input type="text" id="rasa" placeholder="Rasa" class="input-field">
+        <input type="number" id="starost" placeholder="Starost" class="input-field">
+        <input type="number" id="vlasnikId" placeholder="ID vlasnika" class="input-field">
+    </div>
+
+    <button onclick="saveLjubimac()" class="btn-primary" id="saveBtn">
+        Sačuvaj ljubimca
+    </button>
+</div>
+
+<div class="table-container">
+    <h2>Lista ljubimaca</h2>
+
+    <table class="data-table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Ime</th>
+            <th>Vrsta</th>
+            <th>Rasa</th>
+            <th>Starost</th>
+            <th>Vlasnik ID</th>
+            <th>Akcije</th>
+        </tr>
+        </thead>
+
+        <tbody id="ljubimci-tbody"></tbody>
+    </table>
+</div>
+
+<footer class="footer">
+    <p>Pet Grooming Salon &copy; 2026. Sva prava zadržana.</p>
+</footer>
+
+<script src="ljubimci.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termini - Pet Grooming</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">Pet Grooming</div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="vlasnik.html">Vlasnici</a></li>
+        <li><a href="ljubimci.html">Ljubimci</a></li>
+        <li><a href="termini.html" class="active">Termini</a></li>
+    </ul>
+</nav>
+
+<div class="page-header">
+    <h1>Termini</h1>
+    <p>Zakazivanje grooming termina za ljubimce</p>
+</div>
+
+<div class="form-container">
+    <h2>Dodaj termin</h2>
+
+    <input type="hidden" id="terminId">
+
+    <div class="form-grid">
+        <input type="datetime-local" id="datumVreme" class="input-field">
+
+        <select id="usluga" class="input-field">
+            <option value="">Izaberi uslugu</option>
+            <option value="Kupanje">Kupanje</option>
+            <option value="Sisanje">Sisanje</option>
+            <option value="Sredjivanje noktiju">Sredjivanje noktiju</option>
+            <option value="Cetkanje">Cetkanje</option>
+            <option value="Kompletan tretman">Kompletan tretman</option>
+        </select>
+
+        <select id="status" class="input-field">
+            <option value="">Izaberi status</option>
+            <option value="Zakazan">Zakazan</option>
+            <option value="Zavrsen">Zavrsen</option>
+            <option value="Otkazan">Otkazan</option>
+        </select>
+
+        <input type="text" id="napomena" placeholder="Napomena" class="input-field">
+        <input type="number" id="ljubimacId" placeholder="ID ljubimca" class="input-field">
+    </div>
+
+    <button onclick="saveTermin()" class="btn-primary" id="saveBtn">
+        Sačuvaj termin
+    </button>
+</div>
+
+<div class="table-container">
+    <h2>Lista termina</h2>
+
+    <table class="data-table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Datum i vreme</th>
+            <th>Usluga</th>
+            <th>Status</th>
+            <th>Napomena</th>
+            <th>Ljubimac ID</th>
+            <th>Akcije</th>
+        </tr>
+        </thead>
+
+        <tbody id="termini-tbody"></tbody>
+    </table>
+</div>
+
+<footer class="footer">
+    <p>Pet Grooming Salon &copy; 2026. Sva prava zadržana.</p>
+</footer>
+
+<script src="termini.js"></script>
+</body>
+</html>

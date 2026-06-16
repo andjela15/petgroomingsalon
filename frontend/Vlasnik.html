@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vlasnici - Pet Grooming Salon</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">Pet Grooming</div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="vlasnici.html" class="active">Vlasnici</a></li>
+        <li><a href="ljubimci.html">Ljubimci</a></li>
+        <li><a href="termini.html">Termini</a></li>
+    </ul>
+</nav>
+
+<div class="page-header">
+    <h1>Vlasnici</h1>
+    <p>Dodavanje, pregled i izmena vlasnika ljubimaca</p>
+</div>
+
+<div class="form-container">
+    <h2>Dodaj vlasnika</h2>
+
+    <input type="hidden" id="vlasnikId">
+
+    <div class="form-grid">
+        <input type="text" id="ime" placeholder="Ime" class="input-field">
+        <input type="text" id="prezime" placeholder="Prezime" class="input-field">
+        <input type="text" id="telefon" placeholder="Telefon" class="input-field">
+        <input type="email" id="email" placeholder="Email" class="input-field">
+    </div>
+
+    <button onclick="saveVlasnik()" class="btn-primary" id="saveBtn">
+        Sačuvaj vlasnika
+    </button>
+</div>
+
+<div class="table-container">
+    <h2>Lista vlasnika</h2>
+
+    <table class="data-table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Telefon</th>
+            <th>Email</th>
+            <th>Akcije</th>
+        </tr>
+        </thead>
+
+        <tbody id="vlasnici-tbody"></tbody>
+    </table>
+</div>
+
+<footer class="footer">
+    <p>Pet Grooming Salon &copy; 2026. Sva prava zadržana.</p>
+</footer>
+
+<script src="vlasnik.js"></script>
+</body>
+</html>
