@@ -13,8 +13,11 @@ Korišćene tehnologije
 - Vanilla JavaScript
 
 Opis projekta
+
 Aplikacija služi za upravljanje osnovnim podacima u pet grooming salonu.
+
 Korisnik može da:
+
 - dodaje vlasnike
 - pregleda listu vlasnika
 - menja podatke o vlasnicima
@@ -30,17 +33,23 @@ Korisnik može da:
 
 Baza podataka
 U projektu se koristi relaciona MySQL baza podataka.
+
 Baza sadrži tri tabele:
 vlasnik
+
 Tabela vlasnik čuva podatke o vlasnicima ljubimaca.
+
 Kolone:
 - vlasnik_id
 - ime
 - prezime
 - telefon
 - email
+  
 ljubimci
+
 Tabela ljubimci čuva podatke o ljubimcima.
+
 Kolone:
 - ljubimac_id
 - ime
@@ -50,7 +59,9 @@ Kolone:
 - vlasnik_id
 
 termini
+
 Tabela termini čuva podatke o zakazanim terminima.
+
 Kolone:
 - termin_id
 - datum_vreme
@@ -60,6 +71,7 @@ Kolone:
 - ljubimac_id
 
 Relacije u bazi
+
 U bazi postoje relacije između tabela:
 
 - jedan vlasnik može imati više ljubimaca
