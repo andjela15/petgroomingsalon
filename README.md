@@ -1,4 +1,5 @@
 Pet Grooming Salon
+
 Ovo je ispitni projekat iz predmeta koji obuhvata rad sa relacionom bazom podataka, backendom i frontendom.
 Tema projekta je aplikacija za pet grooming salon. Aplikacija omogućava evidenciju vlasnika, njihovih ljubimaca i termina za grooming usluge.
 
